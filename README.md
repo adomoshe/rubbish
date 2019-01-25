@@ -1,2 +1,2 @@
-# trash
+# rubbish
 Trash service for lazy people
