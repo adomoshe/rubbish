@@ -1,13 +1,12 @@
 
 import React from "react";
-import "./wall.css";
+// import "./wall.css";
 
-const Wall = props => (
-  <div className="card" onClick={() => props.clickCount(props.id)}>
-    <div className="img-container">
-      <img alt={props.name} src={props.image} />
-    </div>
-  </div>
-);
+const Wall = (props) => (<div className="wall-posts">
+    {props.wallPost.map(item => (<li className="post-item" key={item.id}>
+        {item.name}
+    </li>))}
+</div>)
+
 
 export default Wall;
