@@ -1,7 +1,11 @@
 const router = require("express").Router();
-// const bookRoutes = require("./books");
+const homeowner = require("./homeowner");
+const trashman = require("./trashman");
 
-// Book routes
-// router.use("/books", bookRoutes);
+// Homeowner routes
+router.use("/homeowner", homeowner);
+
+// Trashman routes
+router.use("/trashman", trashman);
 
 module.exports = router;
