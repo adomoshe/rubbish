@@ -5,6 +5,7 @@ a {
 .card {
     width: 500px;
     margin: 150px auto;
+    text-align: center;
 }
 
 .button-green {
