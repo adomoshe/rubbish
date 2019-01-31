@@ -7,6 +7,7 @@ import Wall from './components/Wall';
 import Notifications from './components/Notifications';
 import Messages from './components/Messages';
 import Login from './components/Login';
+import Register from './components/Register';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route exact path="/notifications" component={Notifications} />
         <Route exact path="/messages" component={Messages} />
         <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
       </div>
 
     </Router>
