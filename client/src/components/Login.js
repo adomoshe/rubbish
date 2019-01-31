@@ -16,7 +16,12 @@ const Login = () => {
                             <input className="col-sm-4" name="password" type="password" placeholder="Password"></input>
                         </form>
                         <br />
-                        <button type="button" className="btn btn-info">Submit</button>
+                        <a href="#">Forgot password?</a>
+                        &nbsp; &nbsp;
+                        <a href="#">Create new account.</a>
+                        <br />
+                        <button type="button" className="btn btn-info button-green" href="#">Submit</button>
+
                     </div>
                 </div>
             </div>

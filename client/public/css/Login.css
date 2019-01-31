@@ -1,4 +1,12 @@
+a {
+    color: #1DC642 !important;
+}
+
 .card {
     width: 500px;
     margin: 150px auto;
+}
+
+.button-green {
+    background: #1DC642;
 }

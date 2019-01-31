@@ -1,6 +1,5 @@
 
 import React from "react";
-import "./wall.css";
 
 const Wall = props => (
   <div className="card" onClick={() => props.clickCount(props.id)}>

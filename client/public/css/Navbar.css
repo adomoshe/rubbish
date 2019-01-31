@@ -1,3 +1,28 @@
 .navbar {
     width: 100%;
+    padding-top: 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar ul li {
+    box-sizing: border-box;
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.navbar ul li a {
+    color: #1DC642;
+}
+
+.login-button {
+    background: #1DC642;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+ a.login-button {
+    color: white !important;
 }
