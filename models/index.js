@@ -1,3 +1,4 @@
 module.exports = {
-    Rubbish: require("./rubbish")
+    Trashman: require("./Trashman"),
+    Owner: require("./Owner")
 }
