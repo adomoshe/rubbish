@@ -10,6 +10,12 @@ const Register = () => {
                 <div className="card-body">
                     <h3>Please Register</h3>
                     <form>
+                        <label className="col-sm-3" for="inputUsername">First Name</label>
+                        <input className="col-sm-4" name="firstName" type="text" placeholder="Enter First Name"></input>
+                        <br />
+                        <label className="col-sm-3" for="inputUsername">Last Name</label>
+                        <input className="col-sm-4" name="lastName" type="text" placeholder="Enter Last Name"></input>
+                        <br />
                         <label className="col-sm-3" for="inputUsername">Email &nbsp;</label>
                         <input className="col-sm-4" name="username" type="text" placeholder="Enter Email"></input>
                         <br />
