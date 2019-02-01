@@ -1,8 +1,10 @@
 require('dotenv').config()
 const express = require('express');
+const app = express();
+const router = require('express').Router();
+const path = require('path');
 // const mongoose = require("mongoose");
 const routes = require('./routes');
-const app = express();
 const PORT = process.env.PORT || 3001;
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
@@ -24,6 +26,12 @@ io.listen(8000);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('public'));
+}
+
+if (process.env.NODE_ENV === 'production') {
+  router.use((req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  });
 }
 
 app.use(routes);
