@@ -1,16 +1,27 @@
 import React, { Component } from 'react';
-import 'whatwg-fetch';
 import openSocket from 'socket.io-client';
 const socket = openSocket('http://localhost:3002');
 
 class Messages extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+        message: ''
+    }
     this.sendSocketIO = this.sendSocketIO.bind(this);
+    this.buildMessage = this.buildMessage.bind(this);
+  }
+
+  buildMessage(e) {
+      const name = e.target.name;
+      const input = e.target.value;
+      this.setState({
+          [name]: input
+      })
   }
 
   sendSocketIO() {
-    socket.emit('example_message', 'hello');
+    socket.emit('example_message', this.state.message);
   }
 
   render() {
@@ -20,9 +31,12 @@ class Messages extends Component {
         <div className="jumbotron">
           <h1 className="display-4">Send Message</h1>
           <textarea
+          name='message'
+          type='text'
             id="message"
             className="form-control"
             placeholder="Your Message Here"
+            onChange={this.buildMessage}
           />
           <br />
           <button onClick={this.sendSocketIO} id="send" className="btn btn-success">
