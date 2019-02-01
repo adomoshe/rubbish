@@ -17,7 +17,9 @@ const Profile = () => {
                         <li className="list-group-item">Address: 123 Dumpster Blvd.</li>
                     </ul>
                 </div>
+                <button type="submit" className="btn btn-primary">Logout</button>
             </div>
+
 
         </div>
     )
