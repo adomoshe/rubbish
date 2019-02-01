@@ -4,6 +4,7 @@
   "description": "Trash app",
   "main": "server.js",
   "dependencies": {
+    "express": "^4.16.4",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router": "^4.3.1",
