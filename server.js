@@ -5,12 +5,12 @@ const path = require('path');
 // const mongoose = require("mongoose");
 const routes = require('./routes');
 const PORT = process.env.PORT || 3001;
-const http = require('http').Server(app);
-const io = require('socket.io')(http);
-var socket = require('socket.io-client')('http://localhost');
-// socket.on('connect', function(){});
+const server = require('http').Server(app);
+const io = require('socket.io')(server);
+const socket = require('socket.io-client')('http://localhost');
+// socket.on('connect', function(){console.log('connected')});
 // socket.on('event', function(data){});
-// socket.on('disconnect', function(){});
+// socket.on('disconnect', function(){console.log('disconnected')});
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -25,12 +25,12 @@ io.on('connection', socket => {
   });
 });
 
-io.listen(8000);
+// io.listen(3001);
 
 // if (process.env.NODE_ENV === 'development') {
-//   app.get('/', (req, res) => {
-//     res.sendFile(path.join(__dirname, './client/public/index.html'));
-//   });
+//   app.get('/', function(req, res){
+//   res.sendFile(__dirname + '/client/public/index.html');
+// });
 // }
 
 // if (process.env.NODE_ENV === 'production') {
@@ -43,8 +43,8 @@ app.use(routes);
 
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
 
-http.listen(3002, () => {
-  console.log('listening on *:3002');
+server.listen(3002, function(){
+  console.log('listening on *:3000');
 });
 
 // Start the API server
