@@ -7,12 +7,14 @@ const routes = require('./routes');
 const PORT = process.env.PORT || 3001;
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
+const passport = require("passport");
 // socket.on('connect', function(){console.log('connected')});
 // socket.on('event', function(data){});
 // socket.on('disconnect', function(){console.log('disconnected')});
 // `````````````````````````````
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(passport.initialize());
 
 io.on('connection', socket => {
     console.log('a user connected');
