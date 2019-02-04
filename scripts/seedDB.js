@@ -35,3 +35,7 @@ const ownerSeed = [
         email: "sl@gmail.com",
     }
 ];
+
+db.Owner
+
+db.Trashman
