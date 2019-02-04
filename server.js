@@ -11,39 +11,39 @@ const io = require('socket.io')(server);
 // socket.on('event', function(data){});
 // socket.on('disconnect', function(){console.log('disconnected')});
 // `````````````````````````````
-// app.use(express.urlencoded({ extended: true }));
-// app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-// io.on('connection', socket => {
-//   console.log('a user connected');
-//   socket.on('disconnect', () => {
-//     console.log('User Disconnected');
-//   });
-//   socket.on('example_message', msg => {
-//     console.log(`message: ${msg}`);
-//   });
+io.on('connection', socket => {
+  console.log('a user connected');
+  socket.on('disconnect', () => {
+    console.log('User Disconnected');
+  });
+  socket.on('example_message', msg => {
+    console.log(`message: ${msg}`);
+  });
+});
+
+io.listen(3002);
+
+// if (process.env.NODE_ENV === 'development') {
+//   app.get('/', function(req, res){
+//   res.sendFile(__dirname + '/client/public/index.html');
 // });
+// }
 
-// io.listen(3002);
+// if (process.env.NODE_ENV === 'production') {
+//   app.use((req, res) => {
+//     res.sendFile(path.join(__dirname, '../client/build/index.html'));
+//   });
+// }
 
-// // if (process.env.NODE_ENV === 'development') {
-// //   app.get('/', function(req, res){
-// //   res.sendFile(__dirname + '/client/public/index.html');
-// // });
-// // }
+app.use(routes);
 
-// // if (process.env.NODE_ENV === 'production') {
-// //   app.use((req, res) => {
-// //     res.sendFile(path.join(__dirname, '../client/build/index.html'));
-// //   });
-// // }
-
-// app.use(routes);
-
-// // mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
 
 
-// // Start the API server
-// app.listen(PORT, () => {
-//   console.log(`API Server now listening on PORT ${PORT}!`);
-// });
+// Start the API server
+app.listen(PORT, () => {
+  console.log(`API Server now listening on PORT ${PORT}!`);
+});
