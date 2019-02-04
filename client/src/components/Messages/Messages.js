@@ -23,7 +23,7 @@ class Messages extends Component {
   sendMessage() {
     socket.emit('example_message', this.state.message);
     this.setState({
-      message: ''
+        message: ''
     })
   }
 

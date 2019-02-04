@@ -1,13 +1,13 @@
-require('dotenv').config()
+require('dotenv').config();
 const express = require('express');
 const app = express();
-const path = require('path');
-// const mongoose = require("mongoose");
-const routes = require('./routes');
-const PORT = process.env.PORT || 3001;
+// const path = require('path');
+const mongoose = require('mongoose');
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 const passport = require("passport");
+const routes = require('./routes');
+const PORT = process.env.PORT || 3001;
 // socket.on('connect', function(){console.log('connected')});
 // socket.on('event', function(data){});
 // socket.on('disconnect', function(){console.log('disconnected')});
@@ -42,10 +42,11 @@ io.listen(3002);
 
 app.use(routes);
 
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
-
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost/reactreadinglist'
+);
 
 // Start the API server
 app.listen(PORT, () => {
-    console.log(`API Server now listening on PORT ${PORT}!`);
+  console.log(`API Server now listening on PORT ${PORT}!`);
 });

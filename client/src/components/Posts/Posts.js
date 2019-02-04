@@ -1,31 +1,39 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
-var headline = "HELP NEEDED!"
-
-var photo = <img className="photo" src="#"></img>
-
-var description = <p className ="description">lorem ipsum dolor sit ;alskdjfa;lsjkdfalskdjfasdfl;sakjfas;lkdfja;klsdjf;alksjdf;kladsjf;adlkfj</p>
-
-var contact = <button className="contact-btn">CONTACT</button>
-
-ReactDOM.render(
-    <div>
-    <h1>{headline}</h1>
-    <br />
-    <p>{photo}</p>
-    <br />
-    <p>{description}</p>
-    <br />
-    <button>
-        {contact}
-    </button>
-</div>
-)
+// import ReactDOM from 'react-dom';
 
 
 
-    // document.getElementById('wall'))
+class Post extends React.Component {
+    render() {
+    // uh import all posts?
+    var headline = "NEED TRASH HELP"
+    // var img = 
+    var description = "Looking for someone to help me take out the trash next week!"
+
+    const contact = () => {
+        alert("needs to route to messages box between user and poster")
+    }
+
+
+    return ( 
+        <div className="post-box">
+            <h1 className="post-head">{headline}</h1>
+            <p className="post-descr">{description}</p>
+            <button onClick = {contact} className="contact-btn">CONTACT</button> 
+        </div>
+    )
+
+    }
+}
+
+
+// ReactDOM.render(
+//    <Post />, document.getElementById('wall')
+// )
+
+export default Post;
+
+
 
 
 

@@ -1,13 +1,12 @@
 
 import React from "react";
+import Post from '../Posts/Posts';
 
-const Wall = props => (
-  <div className="card" onClick={() => props.clickCount(props.id)}>
-    <div className="img-container">
-      <img alt={props.name} src={props.image} />
-    </div>
-  </div>
-);
+class Wall extends React.Component {
+  render() {
+    return <div><Post /></div>
+  }
+}
 
 export default Wall;
 
