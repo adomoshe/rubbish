@@ -5,6 +5,7 @@ const app = express();
 const mongoose = require('mongoose');
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
+const passport = require("passport");
 const routes = require('./routes');
 const PORT = process.env.PORT || 3001;
 // socket.on('connect', function(){console.log('connected')});
@@ -13,15 +14,16 @@ const PORT = process.env.PORT || 3001;
 // `````````````````````````````
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(passport.initialize());
 
 io.on('connection', socket => {
-  console.log('a user connected');
-  socket.on('disconnect', () => {
-    console.log('User Disconnected');
-  });
-  socket.on('example_message', msg => {
-    console.log(`message: ${msg}`);
-  });
+    console.log('a user connected');
+    socket.on('disconnect', () => {
+        console.log('User Disconnected');
+    });
+    socket.on('example_message', msg => {
+        console.log(`message: ${msg}`);
+    });
 });
 
 io.listen(3002);
