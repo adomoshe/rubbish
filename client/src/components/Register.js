@@ -27,7 +27,7 @@ const Register = () => {
                     <Link to="/login">Already a user?</Link>
                     <br />
                     <br />
-                    <button type="button" className="btn btn-info button-green" href="#">Submit</button>
+                    <button type="submit" className="btn btn-info button-green" href="#">Submit</button>
                 </div>
             </div>
         </div >

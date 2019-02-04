@@ -21,7 +21,7 @@ const Login = () => {
                     <Link to="/register">Not a user? Create new account.</Link>
                     <br />
                     <br />
-                    <button type="button" className="btn btn-info button-green" href="#">Submit</button>
+                    <button type="submit" className="btn btn-info button-green" href="#">Submit</button>
                 </div>
             </div>
         </div >
