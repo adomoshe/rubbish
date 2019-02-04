@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import openSocket from 'socket.io-client';
-const socket = openSocket('http://localhost:3002');
+// import openSocket from 'socket.io-client';
+// const socket = openSocket('http://localhost:3002');
 
 class Messages extends Component {
   constructor(props) {
@@ -20,12 +20,12 @@ class Messages extends Component {
     });
   }
 
-  sendMessage() {
-    socket.emit('example_message', this.state.message);
-    this.setState({
-        message: ''
-    })
-  }
+  // sendMessage() {
+  //   socket.emit('example_message', this.state.message);
+  //   this.setState({
+  //       message: ''
+  //   })
+  // }
 
   render() {
     return (
