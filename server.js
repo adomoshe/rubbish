@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -41,7 +41,6 @@ io.listen(3002);
 app.use(routes);
 
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
-
 
 // Start the API server
 app.listen(PORT, () => {
