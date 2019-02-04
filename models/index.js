@@ -1,4 +1,4 @@
 module.exports = {
-    Trashman: require("./Trashman"),
-    Owner: require("./Owner")
-}
+  Trashman: require('./trashman'),
+  Owner: require('./owner')
+};
