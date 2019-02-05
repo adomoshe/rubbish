@@ -15,8 +15,8 @@ export default {
     return axios.delete("/api/trashman/" + id);
   },
   // Saves a book to the database
-  saveTrashman: function(bookData) {
-    return axios.post("/api/trashman", bookData);
+  saveTrashman: function(newTrashman) {
+    return axios.post("/api/trashman", newTrashman);
   },
   getOwners: function() {
     console.log("HERE")
