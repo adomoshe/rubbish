@@ -10,4 +10,6 @@ a {
 
 .button-green {
     background: #1DC642;
+    display: block;
+    margin: 20px auto 0px;
 }
