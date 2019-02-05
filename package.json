@@ -10,6 +10,7 @@
     "google-maps-react": "^2.0.2",
     "mongoose": "^5.4.9",
     "passport": "^0.4.0",
+    "prop-type": "0.0.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router": "^4.3.1",
