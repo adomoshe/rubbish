@@ -20,7 +20,7 @@ class Register extends Component {
     // Getting the value and name of the input which triggered the change
     let value = e.target.value;
     const name = e.target.name;
-    
+
     // Updating the input's state
     this.setState({
       [name]: value
@@ -30,7 +30,7 @@ class Register extends Component {
   submit(e) {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
-    if (!this.state.firstName || !this.state.lastName) {
+    if (!this.state.firstname || !this.state.lastname) {
       alert('Fill out your first and last name please!');
     } else if (this.state.password.length < 6) {
       alert(
@@ -42,7 +42,7 @@ class Register extends Component {
       API.saveTrashman()
         .then(res => console.log(res))
         .catch(err => console.log(err));
-      alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
+      alert(`Hello ${this.state.firstname} ${this.state.lastname}`);
     }
 
     this.setState({

@@ -16,6 +16,7 @@ export default {
   },
   // Saves a book to the database
   saveTrashman: function(newTrashman) {
+    console.log('trying to save trashman!')
     return axios.post("/api/trashman", newTrashman);
   },
   getOwners: function() {
