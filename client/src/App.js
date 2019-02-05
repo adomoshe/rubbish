@@ -15,7 +15,7 @@ function App() {
     <Router>
       <div>
 
-        {/* <Navbar /> */}
+        <Navbar />
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/wall" component={Wall} />
         <Route exact path="/notifications" component={Notifications} />
