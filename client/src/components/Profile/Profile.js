@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import API from '../../utils/API';
+
 class Profile extends Component {
   componentDidMount() {
-    fetch('/api/trashman')
-      .then(res => console.log('res is', res))
-    //   .then(json => {
-    //     console.log(`json response ${json}`);
-    //   });
+    API.getTrashmen()
+      .then(res => console.log(res))
+      .catch(err => console.log(err));
   }
 
   cardStyle = {
