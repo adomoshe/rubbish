@@ -1,3 +1,7 @@
+form {
+    padding-top: 5px;
+}
+
 a {
     color: #1DC642 !important;
 }
@@ -10,4 +14,7 @@ a {
 
 .button-green {
     background: #1DC642;
+    display: block;
+    margin: auto;
+    margin: 20px auto 0px;
 }
