@@ -10,7 +10,7 @@ const Login = () => {
                 <div className="card-body">
                     <h3>Please Sign In</h3>
                     <br />
-                    <form>
+                    <form action="/profile" method="POST">
                         <label className="col-sm-3" htmlFor="inputUsername">Login &nbsp;</label>
                         <input className="col-sm-4" name="username" type="text" placeholder="Enter Username"></input>
                         <br />

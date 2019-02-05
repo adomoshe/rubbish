@@ -10,7 +10,7 @@ const Register = () => {
                 <div className="card-body">
                     <h3>Please Register</h3>
                     <br />
-                    <form>
+                    <form action="/login" method="POST">
                         <label className="col-sm-3" htmlFor="inputUsername">First Name</label>
                         <input className="col-sm-4" name="firstName" type="text" placeholder="Enter First Name"></input>
                         <br />
@@ -22,13 +22,11 @@ const Register = () => {
                         <br />
                         <label className="col-sm-3" htmlFor="inputPassword">Password &nbsp;</label>
                         <input className="col-sm-4" name="password" type="password" placeholder="Enter Password"></input>
-                        <label for="exampleFormControlSelect1">Example select</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                        <br />
+                        <label className="col-sm-3" htmlFor="exampleFormControlSelect1">Select One</label>
+                        <select className="col-sm-4 option" id="exampleFormControlSelect1">
+                            <option>Homeowner</option>
+                            <option>Trashman</option>
                         </select>
                     </form>
                     <br />
