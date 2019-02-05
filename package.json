@@ -11,7 +11,11 @@
     "mongoose": "^5.4.9",
     "nodemon": "^1.18.9",
     "passport": "^0.4.0",
+<<<<<<< HEAD
     "passport-local": "^1.0.0",
+=======
+    "prop-type": "0.0.1",
+>>>>>>> ad9d22df7a0f9f7a68184a4c713f84eba358ea4f
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router": "^4.3.1",
