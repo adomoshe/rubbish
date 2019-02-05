@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const TrashmanSchema = new Schema({
+const OwnerSchema = new Schema({
   firstName: {
     type: String,
     trim: true,
@@ -35,11 +35,11 @@ const TrashmanSchema = new Schema({
   }
 });
 
-TrashmanSchema.methods.setFullName = function() {
+OwnerSchema.methods.setFullName = function() {
   this.fullName = this.firstName + ' ' + this.lastName;
   return this.fullName;
 };
 
-const Trashman = mongoose.model('Trashman', TrashmanSchema);
+const Owner = mongoose.model('Owner', OwnerSchema);
 
-module.exports = Trashman;
+module.exports = Owner;

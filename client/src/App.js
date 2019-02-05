@@ -1,13 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import Navbar from "./components/Navbar";
-import Profile from './components/Profile';
-import Wall from './components/Wall';
-import Notifications from './components/Notifications';
-import Messages from './components/Messages';
-import Login from './components/Login';
-import Register from './components/Register';
+import Navbar from "./components/Navbar/Navbar";
+import Profile from './components/Profile/Profile';
+import Wall from './components/Wall/Wall';
+import Notifications from './components/Notifications/Notifications';
+import Messages from './components/Messages/Messages';
+import Login from './components/Login/Login';
+import Register from './components/Register/Register';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 function App() {

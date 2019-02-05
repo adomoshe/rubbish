@@ -1,16 +1,17 @@
-const router = require("express").Router();
-const rubbishController = require("../../controllers/rubbishController");
+const router = require('express').Router();
+const ownerController = require('../../controllers/ownerController');
 
-// Matches with "/api/books"
-// router.route("/")
-//   .get(rubbishController.findAll)
-//   .post(rubbishController.create);
+// Matches with "/api/homeowner"
+router
+  .route('/')
+  .get(ownerController.findAll)
+  .post(ownerController.create);
 
-// // Matches with "/api/books/:id"
-// router
-//   .route("/:id")
-//   .get(rubbishController.findById)
-//   .put(rubbishController.update)
-//   .delete(rubbishController.remove);
+// Matches with "/api/homeowner/:id"
+router
+  .route('/:id')
+  .get(ownerController.findById)
+  .put(ownerController.update)
+  .delete(ownerController.remove);
 
 module.exports = router;

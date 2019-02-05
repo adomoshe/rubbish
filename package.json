@@ -4,18 +4,30 @@
   "description": "Trash app",
   "main": "server.js",
   "dependencies": {
+    "config.json": "0.0.4",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "google-maps-react": "^2.0.2",
+    "mongoose": "^5.4.9",
+    "passport": "^0.4.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "scheduler": "^0.12.0"
+    "scheduler": "^0.12.0",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.7"
+  },
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
-    "start:dev": "npm run client",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
