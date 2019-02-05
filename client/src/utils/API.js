@@ -17,5 +17,21 @@ export default {
   // Saves a book to the database
   saveTrashman: function(bookData) {
     return axios.post("/api/trashman", bookData);
+  },
+  getOwners: function() {
+    console.log("HERE")
+    return axios.get("/api/homeowner/");
+  },
+  // Gets the book with the given id
+  getOwner: function(id) {
+    return axios.get("/api/homeowner/" + id);
+  },
+  // Deletes the book with the given id
+  deleteOwner: function(id) {
+    return axios.delete("/api/homeowner/" + id);
+  },
+  // Saves a book to the database
+  saveOwner: function(bookData) {
+    return axios.post("/api/homeowner", bookData);
   }
 };
