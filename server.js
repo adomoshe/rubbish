@@ -5,25 +5,26 @@ const app = express();
 const mongoose = require('mongoose');
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
-const passport = require("passport");
+const passport = require('passport');
 const routes = require('./routes');
+app.use(routes);
 const PORT = process.env.PORT || 3001;
 // socket.on('connect', function(){console.log('connected')});
 // socket.on('event', function(data){});
 // socket.on('disconnect', function(){console.log('disconnected')});
-// `````````````````````````````
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(passport.initialize());
 
 io.on('connection', socket => {
-    console.log('a user connected');
-    socket.on('disconnect', () => {
-        console.log('User Disconnected');
-    });
-    socket.on('example_message', msg => {
-        console.log(`message: ${msg}`);
-    });
+  console.log('a user connected');
+  socket.on('disconnect', () => {
+    console.log('User Disconnected');
+  });
+  socket.on('example_message', msg => {
+    console.log(`message: ${msg}`);
+  });
 });
 
 io.listen(3002);
@@ -34,17 +35,18 @@ io.listen(3002);
 // });
 // }
 
-// if (process.env.NODE_ENV === 'production') {
-//   app.use((req, res) => {
-//     res.sendFile(path.join(__dirname, '../client/build/index.html'));
-//   });
-// }
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+}
 
-app.use(routes);
 
-mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/reactreadinglist'
-);
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/rubbish';
+
+mongoose.connect(MONGODB_URI);
+
+mongoose.Promise = global.Promise;
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 // Start the API server
 app.listen(PORT, () => {

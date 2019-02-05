@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Navbar from "./components/Navbar/Navbar";
 import Profile from './components/Profile/Profile';
@@ -15,7 +15,7 @@ function App() {
     <Router>
       <div>
 
-        <Navbar />
+        {/* <Navbar /> */}
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/wall" component={Wall} />
         <Route exact path="/notifications" component={Notifications} />
