@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "../Profile/profile.css"
 import { Link } from 'react-router-dom';
 
 import API from '../../utils/API';
