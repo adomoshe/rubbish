@@ -36,7 +36,7 @@ const ownerSeed = [
 db.Owner.remove({})
   .then(() => db.Owner.collection.insertMany(ownerSeed))
   .then(data => {
-    console.log(data.result.n + ' records fro owner inserted!');
+    console.log(data.result.n + ' records for owner inserted!');
     process.exit(0);
   })
   .catch(err => {
