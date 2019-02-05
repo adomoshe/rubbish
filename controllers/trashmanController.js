@@ -3,9 +3,10 @@ const db = require('../models');
 // Defining methods for the Trashmans Controller
 module.exports = {
   findAll(req, res) {
+    console.log('in findall')
     db.Trashman.find(req.query)
       .sort({ date: -1 })
-      .then(dbModel => res.json(dbModel))
+      .then(dbModel => console.log(dbModel), res.json({message: 'Here it is' + dbModel}))
       .catch(err => res.status(422).json(err));
   },
   findById(req, res) {
