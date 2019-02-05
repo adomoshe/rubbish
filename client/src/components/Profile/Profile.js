@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 class Profile extends Component {
   componentDidMount() {
-    fetch('/api/trashman', { method: 'POST' })
+    fetch('/api/trashman')
       .then(res => console.log('res is', res))
     //   .then(json => {
     //     console.log(`json response ${json}`);
