@@ -1,11 +1,17 @@
 import React from "react";
+import "../Notifications/notifications.css"
+import { Link } from "react-router-dom";
 
-const Notifications = () => {
-    return (
-        <div>
-            Notifications
-        </div>
+class Notification extends React.Component {
+    render() {
+    var notifcation = "You have 1 new message from Oscar"
+
+    return ( 
+        <Link to="/messages"><button className="notification">{notifcation}</button></Link>
+
     )
+
+    }
 }
 
-export default Notifications;
+export default Notification;
