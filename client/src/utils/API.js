@@ -1,38 +1,39 @@
-import axios from "axios";
+import axios from 'axios';
 
 export default {
   // Gets all books
   getTrashmen: function() {
-    console.log("HERE")
-    return axios.get("/api/trashman/");
+    console.log('HERE');
+    return axios.get('/api/trashman/');
   },
   // Gets the book with the given id
   getTrashman: function(id) {
-    return axios.get("/api/trashman/" + id);
+    return axios.get('/api/trashman/' + id);
   },
   // Deletes the book with the given id
   deleteTrashman: function(id) {
-    return axios.delete("/api/trashman/" + id);
+    return axios.delete('/api/trashman/' + id);
   },
   // Saves a book to the database
   saveTrashman: function(newTrashman) {
-    console.log('trying to save trashman!')
-    return axios.post("/api/trashman", newTrashman);
+    console.log('trying to save trashman!');
+    console.log('newTrashman', newTrashman);
+    return axios.post('/api/trashman/', newTrashman);
   },
   getOwners: function() {
-    console.log("HERE")
-    return axios.get("/api/homeowner/");
+    console.log('HERE');
+    return axios.get('/api/homeowner/');
   },
   // Gets the book with the given id
   getOwner: function(id) {
-    return axios.get("/api/homeowner/" + id);
+    return axios.get('/api/homeowner/' + id);
   },
   // Deletes the book with the given id
   deleteOwner: function(id) {
-    return axios.delete("/api/homeowner/" + id);
+    return axios.delete('/api/homeowner/' + id);
   },
   // Saves a book to the database
   saveOwner: function(bookData) {
-    return axios.post("/api/homeowner", bookData);
+    return axios.post('/api/homeowner', bookData);
   }
 };

@@ -39,7 +39,12 @@ class Register extends Component {
         }`
       );
     } else {
-      API.saveTrashman()
+      API.saveTrashman({
+          firstname: this.state.firstname,
+          lastname: this.state.lastname,
+          password: this.state.password,
+          email: this.state.email
+      })
         .then(res => console.log(res))
         .catch(err => console.log(err));
       alert(`Hello ${this.state.firstname} ${this.state.lastname}`);
