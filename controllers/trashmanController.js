@@ -16,7 +16,9 @@ module.exports = {
   },
   create(req, res) {
     db.Trashman.create(req.body)
-      .then(dbModel => res.json('User Created', dbModel))
+      .then(function(dbModel) {
+        res.json('User Created', dbModel);
+      })
       .catch(err => res.status(422).json(err));
   },
   update(req, res) {

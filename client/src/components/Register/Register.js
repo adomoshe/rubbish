@@ -34,16 +34,16 @@ class Register extends Component {
       alert('Fill out your first and last name please!');
     } else if (this.state.password.length < 6) {
       alert(
-        `Choose a more secure password ${this.state.firstName} ${
-          this.state.lastName
+        `Choose a more secure password ${this.state.firstname} ${
+          this.state.lastname
         }`
       );
     } else {
       API.saveTrashman({
-          firstname: this.state.firstname,
-          lastname: this.state.lastname,
-          password: this.state.password,
-          email: this.state.email
+        firstname: this.state.firstname,
+        lastname: this.state.lastname,
+        password: this.state.password,
+        email: this.state.email
       })
         .then(res => console.log(res))
         .catch(err => console.log(err));
@@ -70,6 +70,7 @@ class Register extends Component {
                 First Name
               </label>
               <input
+                value={this.state.firstname}
                 className="col-sm-4"
                 name="firstname"
                 type="text"
@@ -81,6 +82,7 @@ class Register extends Component {
                 Last Name
               </label>
               <input
+                value={this.state.lastname}
                 className="col-sm-4"
                 name="lastname"
                 type="text"
@@ -92,6 +94,7 @@ class Register extends Component {
                 Email &nbsp;
               </label>
               <input
+                value={this.state.email}
                 className="col-sm-4"
                 name="email"
                 type="text"
@@ -103,6 +106,7 @@ class Register extends Component {
                 Password &nbsp;
               </label>
               <input
+                value={this.state.password}
                 className="col-sm-4"
                 name="password"
                 type="password"
