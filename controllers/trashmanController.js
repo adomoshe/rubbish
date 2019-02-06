@@ -3,7 +3,6 @@ const db = require('../models');
 // Defining methods for the Trashmans Controller
 module.exports = {
   findAll(req, res) {
-    console.log('CHICKEN!!!');
     db.Trashman.find({})
       .then(function(dbModel) {
         res.send({ dbModel });
@@ -17,7 +16,9 @@ module.exports = {
   },
   create(req, res) {
     db.Trashman.create(req.body)
-      .then(dbModel => res.json(dbModel))
+      .then(function(dbModel) {
+        res.status(status).json(dbModel);
+      })
       .catch(err => res.status(422).json(err));
   },
   update(req, res) {

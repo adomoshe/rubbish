@@ -1,0 +1,30 @@
+.wrap-div {
+ background-color: #1DC642;
+ padding: 40px;
+border-radius: 30px;
+}
+
+
+.head {
+    color: white;
+    text-transform: uppercase;
+}
+
+.send-btn {
+    border: 2px solid white;
+    background-color: #1DC642;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.big-text {
+    border-radius: 20px;
+    
+}
+
+.send-btn:hover {
+    background-color: rgba(255, 255, 255, 0.342);
+}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import openSocket from 'socket.io-client';
+import "../Messages/messages.css"
 const socket = openSocket('http://localhost:3002');
 
 class Messages extends Component {
@@ -31,14 +32,14 @@ class Messages extends Component {
     return (
       <div className="container">
         <br />
-        <div className="jumbotron">
-          <h1 className="display-4">Send Message</h1>
+        <div className="wrap-div">
+          <h1 className="head">Send Message</h1>
           <textarea
             name="message"
             type="text"
             id="message"
-            className="form-control"
-            placeholder="Your Message Here"
+            className="form-control big-text"
+            placeholder="Your message..."
             onChange={this.buildMessage}
             value={this.state.message}
           />
@@ -46,7 +47,7 @@ class Messages extends Component {
           <button
             onClick={this.sendMessage}
             id="send"
-            className="btn btn-success"
+            className="send-btn"
           >
             Send
           </button>

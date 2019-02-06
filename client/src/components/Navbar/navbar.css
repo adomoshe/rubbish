@@ -1,28 +1,44 @@
 .navbar {
-    width: 100%;
-    padding-top: 20px;
-}
-
-.navbar ul {
-    list-style-type: none;
+    font-family: europa, sans-serif;
+    font-size: 12;
 }
 
 .navbar ul li {
     box-sizing: border-box;
     display: inline-block;
+    /* padding-right: 50px; */
+    letter-spacing: 2px;
+}
+
+.prof,
+.wall,
+.notif,
+.mes {
     padding-right: 20px;
 }
 
-.navbar ul li a {
+/* .navThing:hover {
+    transform: translateY(10)
+} */
+
+.a {
     color: #1DC642;
 }
 
 .login-button {
-    background: #1DC642;
-    padding: 10px 20px;
+    border: solid 2px #1DC642;
+    text-align: center;
     border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
- a.login-button {
+ /* a.login-button {
     color: white !important;
+} */
+
+
+.logo {
+    width:200px;
+   text-align: center;  
 }

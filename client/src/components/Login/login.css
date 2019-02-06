@@ -1,7 +1,54 @@
+<<<<<<< HEAD
 form {
     padding-top: 5px;
 }
 
+=======
+/* form {
+    font-family: europa, sans-serif;
+} */
+
+.sign-in {
+    /* IMPORT FONT!!! same as logo font.
+    the rest use europa. */
+    font-family: europa, sans-serif;
+    font-weight: 600;
+}
+
+.card {
+    /* border: black solid 4px; */
+    background-color: #1DC642;
+    font-family: europa, sans-serif;
+    color: white;
+    border-radius: 30px;
+
+}
+
+input {
+    border: white solid 2px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.sub-btn {
+    border: 2px solid white;
+    background-color: #1DC642;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    /* padding-top: px; */
+    /* padding-bottom: 8px; */
+}
+
+.sub-btn:hover {
+    background-color: rgba(255, 255, 255, 0.342);
+}
+
+
+
+>>>>>>> 125f8c821f4e9666dc504a04c657bfda2f569de7
 a {
     color: #1DC642 !important;
 }
@@ -10,11 +57,19 @@ a {
     width: 500px;
     margin: 150px auto;
     text-align: center;
+    /* font-family: europa, sans-serif; */
 }
 
 .button-green {
     background: #1DC642;
+<<<<<<< HEAD
     display: block;
     margin: auto;
     margin: 20px auto 0px;
+=======
+}
+
+.new-user {
+    color: white;
+>>>>>>> 125f8c821f4e9666dc504a04c657bfda2f569de7
 }
