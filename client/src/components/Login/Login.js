@@ -61,15 +61,15 @@ class Login extends Component {
                         <h3 className="sign-in">SIGN IN</h3>
                         <br />
                         <form>
-                            <label className="col-sm-3" htmlFor="inputUsername">
+                            <label className="col-sm-3" htmlFor="inputEmail">
                                 Email &nbsp;
                         </label>
                             <input 
                                 value={this.state.email}
                                 className="col-sm-4"
-                                name="username"
+                                name="email"
                                 type="text"
-                                placeholder="Enter Username"
+                                placeholder="Enter Email"
                                 onChange={this.typing}
                             />
                             <br />
