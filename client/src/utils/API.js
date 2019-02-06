@@ -6,8 +6,9 @@ export default {
     return axios.get('/api/trashman/');
   },
   // Gets the trashman with the given id
-  getTrashman: function(id) {
-    return axios.get('/api/trashman/' + id);
+  getTrashman: function(loginInfo) {
+    console.log('loginInfo: ', loginInfo);
+    return axios.get('/api/trashman/login' + loginInfo);
   },
   // Deletes the trashman with the given id
   deleteTrashman: function(id) {

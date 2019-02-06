@@ -8,10 +8,12 @@ router
   .post(trashmanController.create);
 
 // Matches with "/api/trashman/:id"
-router
-  .route('/:id')
-  .get(trashmanController.findById)
-  .put(trashmanController.update)
-  .delete(trashmanController.remove);
+// router
+//   .route('/:id')
+//   .get(trashmanController.findById)
+//   .put(trashmanController.update)
+//   .delete(trashmanController.remove);
+
+router.route('/login').get(trashmanController.logIn);
 
 module.exports = router;
