@@ -44,11 +44,12 @@ class Navbar extends React.Component {
                     {/* {this.state.hovering && */}
                   <div className="dropdown">
                         <ul>
-                            <li className="navThing"><Link to="/profile">Profile</Link></li>
-                            <li className="navThing"><Link to="/wall">Wall</Link></li>
-                            <li className="navThing"><Link to="/notifications">Notifications</Link></li>
-                            <li className="navThing"><Link to="/messages">Messages</Link></li>
-                            <li className="navThing"><Link to="/login" className="login-button">Login</Link></li>
+                            <li className="prof"><Link to="/profile">PROFILE</Link></li>
+                            <li className="wall"><Link to="/wall">WALL</Link></li>
+                            <li className="notif"><Link to="/notifications">NOTIFICATIONS</Link></li>
+                            <li className="mes"><Link to="/messages">MESSAGES</Link></li>
+
+                            <li className=" login-button"><Link to="/login" >LOGIN</Link></li> 
                         </ul> 
                         </div>
                     {/* } */}

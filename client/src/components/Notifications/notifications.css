@@ -1,5 +1,21 @@
+
+.container {
+    text-align: center;
+    padding-top: 30px;
+}
+
+
 .notification {
-    border: 1px solid black;
+    border: 2px solid #1DC642;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
     background-color: white;
-    
+    /* margin-left: 35%; */
+}
+
+.notification:hover {
+    transform: translateY(-10px);
+    background-color: rgba(29, 199, 66, 0.514);
+    /* color: white; */
 }
