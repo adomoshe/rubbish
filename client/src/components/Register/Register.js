@@ -41,8 +41,8 @@ class Register extends Component {
       );
     } else {
       API.saveTrashman({
-        firstname: this.state.firstname,
-        lastname: this.state.lastname,
+        firstName: this.state.firstname,
+        lastName: this.state.lastname,
         password: this.state.password,
         email: this.state.email
       })
