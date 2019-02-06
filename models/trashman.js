@@ -48,8 +48,12 @@ TrashmanSchema.prototype.validPassword = function(password) {
   return bcrypt.compareSync(password, this.password);
 };
 
-TrashmanSchema.hook("beforeCreate", function(trashman) {
-  trashman.password = bcrypt.hashSync(trashman.password, bcrypt.genSaltSync(10), null);
+TrashmanSchema.hook('beforeCreate', function(trashman) {
+  trashman.password = bcrypt.hashSync(
+    trashman.password,
+    bcrypt.genSaltSync(10),
+    null
+  );
 });
 
 const Trashman = mongoose.model('Trashman', TrashmanSchema);
