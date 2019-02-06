@@ -9,6 +9,21 @@ module.exports = {
       })
       .catch(err => res.status(422).json(err));
   },
+  logIn(req, res) {
+    console.log(req.body);
+    console.log(req.config);
+    console.log(req.data);
+    console.log(req.params);
+    console.log('In Login');
+    db.Trashman.findOne(
+      { email: req.body.email, password: req.body.password },
+      function(err, trashman) {
+        console.log(err);
+        console.log(trashman);
+        res.status(422).json(trashman);
+      }
+    );
+  },
   findById(req, res) {
     db.Trashman.findById(req.params.id)
       .then(dbModel => res.json(dbModel))
