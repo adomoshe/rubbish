@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-form {
-    padding-top: 5px;
-}
-
-=======
 /* form {
     font-family: europa, sans-serif;
 } */
@@ -48,7 +42,6 @@ input {
 
 
 
->>>>>>> 125f8c821f4e9666dc504a04c657bfda2f569de7
 a {
     color: #1DC642 !important;
 }
@@ -61,15 +54,11 @@ a {
 }
 
 .button-green {
-    background: #1DC642;
-<<<<<<< HEAD
     display: block;
-    margin: auto;
+    background: #1DC642;
     margin: 20px auto 0px;
-=======
 }
 
 .new-user {
     color: white;
->>>>>>> 125f8c821f4e9666dc504a04c657bfda2f569de7
 }

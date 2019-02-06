@@ -11,7 +11,7 @@ class Notification extends React.Component {
         return (
             <div className="container">
                 <Link to="/messages">
-                    <button className=" notification">{notification}</button>
+                    <button className="notification">{notification}</button>
                 </Link>
             </div>
         )

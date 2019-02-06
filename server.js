@@ -19,13 +19,13 @@ app.use(passport.initialize());
 app.use(routes);
 
 io.on('connection', socket => {
-  console.log('a user connected');
-  socket.on('disconnect', () => {
-    console.log('User Disconnected');
-  });
-  socket.on('example_message', msg => {
-    console.log(`message: ${msg}`);
-  });
+    console.log('a user connected');
+    socket.on('disconnect', () => {
+        console.log('User Disconnected');
+    });
+    socket.on('example_message', msg => {
+        console.log(`message: ${msg}`);
+    });
 });
 
 io.listen(3002);
@@ -37,7 +37,7 @@ io.listen(3002);
 // }
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
+    app.use(express.static('client/build'));
 }
 
 
@@ -51,5 +51,5 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 // Start the API server
 app.listen(PORT, () => {
-  console.log(`API Server now listening on PORT ${PORT}!`);
+    console.log(`API Server now listening on PORT ${PORT}!`);
 });
