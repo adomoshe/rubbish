@@ -62,23 +62,28 @@ class Login extends Component {
                         <br />
                         <form>
                             <label className="col-sm-3" htmlFor="inputUsername">
-                                Login &nbsp;
+                                Email &nbsp;
                         </label>
-                            <input className="col-sm-4"
+                            <input 
+                                value={this.state.email}
+                                className="col-sm-4"
                                 name="username"
                                 type="text"
                                 placeholder="Enter Username"
-
+                                onChange={this.typing}
                             />
                             <br />
 
                             <label className="col-sm-3" htmlFor="inputPassword">
                                 Password &nbsp;
                         </label>
-                            <input className="col-sm-4"
+                            <input 
+                                value={this.state.password}
+                                className="col-sm-4"
                                 name="password"
                                 type="password"
                                 placeholder="Enter Password"
+                                onChange={this.typing}
                             />
                         </form>
                         <br />
@@ -87,7 +92,9 @@ class Login extends Component {
                         </Link>
                         <br />
                         <br />
-                        <button type="submit" className="sub-btn" href="#">Submit</button>
+                        <button type="submit" className="sub-btn" onClick={this.submit}>
+                        Submit
+                        </button>
                     </div>
                 </div>
             </div>
