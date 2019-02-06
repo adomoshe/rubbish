@@ -9,8 +9,10 @@ import Messages from './components/Messages/Messages';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+// import ReactDOM from "react-dom";
 
-function App() {
+class App extends React.Component {
+  render() {
   return (
     <Router>
       <div>
@@ -27,6 +29,11 @@ function App() {
     </Router>
   );
 }
+}
 
 
 export default App;
+
+// ReactDOM.render(
+//   <App />, document.getElementById('root')
+// );
