@@ -26,6 +26,7 @@ class Login extends React.Component {
     });
   }
 
+
   submit(e) {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
