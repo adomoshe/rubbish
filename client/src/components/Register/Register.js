@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
-
 const Register = () => {
     return (
         <div className="col-sm" >
@@ -34,7 +32,6 @@ const Register = () => {
                     <Link to="/login">Already a user?</Link>
                     <br />
                     <br />
-                    {/* <button type="submit" className="btn btn-info button-green" href="#">Submit</button> */}
                 </div>
             </div>
         </div >
