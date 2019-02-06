@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt-nodejs');
 const Schema = mongoose.Schema;
 
 const TrashmanSchema = new Schema({
@@ -28,7 +28,10 @@ const TrashmanSchema = new Schema({
     type: String,
     unique: true,
     required: 'E-Mail is required',
-    match: [/.+@.+\..+/, 'Please enter a valid e-mail address']
+    match: [/.+@.+\..+/, 'Please enter a valid e-mail address'],
+    validate: {
+      isEmail: true
+    }
   },
   userCreated: {
     type: Date,
@@ -40,6 +43,14 @@ TrashmanSchema.methods.setFullName = function() {
   this.fullName = this.firstName + ' ' + this.lastName;
   return this.fullName;
 };
+
+TrashmanSchema.prototype.validPassword = function(password) {
+  return bcrypt.compareSync(password, this.password);
+};
+
+TrashmanSchema.hook("beforeCreate", function(trashman) {
+  trashman.password = bcrypt.hashSync(trashman.password, bcrypt.genSaltSync(10), null);
+});
 
 const Trashman = mongoose.model('Trashman', TrashmanSchema);
 
