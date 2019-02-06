@@ -3,7 +3,6 @@ import axios from 'axios';
 export default {
   // Gets all trashmen
   getTrashmen: function() {
-    console.log('HERE');
     return axios.get('/api/trashman/');
   },
   // Gets the trashman with the given id
@@ -21,7 +20,6 @@ export default {
     return axios.post('/api/trashman/', newTrashman);
   },
   getOwners: function() {
-    console.log('HERE');
     return axios.get('/api/homeowner/');
   },
   // Gets the homeowner with the given id
