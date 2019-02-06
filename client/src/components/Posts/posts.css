@@ -1,5 +1,27 @@
+.container {
+    text-align: center;
+}
+
+.contact-btn {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    border: 2px solid white;
+    background-color: #1DC642;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.contact-btn:hover {
+    transform: translateY(-10px)
+}
+
+
 .post-box {
     border: 1px solid black;
     padding: 10px;
-
+    border-radius: 20px;
+    width: 300px;
 }
