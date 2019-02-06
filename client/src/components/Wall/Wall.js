@@ -11,29 +11,34 @@ class Wall extends React.Component {
   render() {
     var newPost = (
       <form>
-        <input 
-        // className="input-box"
+        <input
+          // className="input-box"
           type="text"
           placeholder="What do you need help with?"
         />
-<br/>
+        <br />
         <textarea
-              // className="input-box"
+          // className="input-box"
           // type="textarea"
           placeholder="Write dates and details of job here!"
         />
-<br/>
+        <br />
+
         <button onSubmit="#">POST</button>
 
       </form>
     )
 
+    // pushPost() {
+      
+    // }
+
 
     return (
       <div className="container">
         <div><Post /></div>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <div>{newPost}</div>
       </div>
     )
