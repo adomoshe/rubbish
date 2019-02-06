@@ -25,7 +25,7 @@ const Login = () => {
                     <button type="submit" className="btn btn-info button-green" href="#">Submit</button>
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 
