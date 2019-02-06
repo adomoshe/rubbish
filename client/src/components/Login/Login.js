@@ -21,7 +21,7 @@ class Login extends React.Component{
                         <input className="col-sm-4" name="password" type="password" placeholder="Enter Password"></input>
                     </form>
                     <br />
-                    <Link to="/register">Not a user? Create new account.</Link>
+                    <Link to="/register"> <p className="new-user">Not a user? Create new account.</p></Link>
                     <br />
                     <br />
                     <button type="submit" className="sub-btn" href="#">Submit</button>

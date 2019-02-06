@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../Register/register.css"
 
 
-
-const Register = () => {
+class Register extends React.Component {
+    render() {
     return (
         <div className="col-sm" >
             <div className="card">
@@ -24,14 +25,15 @@ const Register = () => {
                         <input className="col-sm-4" name="password" type="password" placeholder="Enter Password"></input>
                     </form>
                     <br />
-                    <Link to="/login">Already a user?</Link>
+                    <Link to="/login"><p className="new-user">Already a user?</p></Link>
                     <br />
                     <br />
-                    <button type="submit" className="btn btn-info button-green" href="#">Submit</button>
+                    <button type="submit" className="sub-btn" href="#">Submit</button>
                 </div>
             </div>
         </div >
     )
+}
 }
 
 

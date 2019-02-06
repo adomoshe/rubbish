@@ -17,10 +17,12 @@ class Post extends React.Component {
 
 
     return ( 
+        <div className="container">
         <div className="post-box">
             <h1 className="post-head">{headline}</h1>
             <p className="post-descr">{description}</p>
             <button onClick = {contact} className="contact-btn">CONTACT</button> 
+        </div>
         </div>
     )
 
