@@ -4,7 +4,7 @@ const db = require('../models');
 module.exports = {
   findAll(req, res) {
     db.Owner.find({})
-      .then(function(dbModel) {
+      .then((dbModel) => {
         res.send({ dbModel });
       })
       .catch(err => res.status(422).json(err));
