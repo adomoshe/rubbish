@@ -1,7 +1,7 @@
 body {
-  background-image: url("flies!.gif");
-  background-repeat: no-repeat;
-  /* width:100%; */
+  /* background-image: url("flies!_1.gif");
+  height: 100%;
+  background-repeat: no-repeat; */
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -9,6 +9,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#flies {
+  position: fixed;
+  z-index:-10;
 }
 
 code {
