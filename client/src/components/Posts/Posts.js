@@ -21,7 +21,7 @@ class Post extends React.Component {
     var description = "Looking for someone to help me take out the trash next week!"
 
     const contact = () => {
-        alert("needs to route to messages box between user and poster")
+        // alert("needs to route to messages box between user and poster")
     }
 
 
