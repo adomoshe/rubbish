@@ -1,6 +1,12 @@
+.container {
+    text-align: center;
+}
+
+
 .navbar {
     font-family: europa, sans-serif;
     font-size: 12;
+    text-align: center;
 }
 
 .navbar ul li {
@@ -17,28 +23,21 @@
     padding-right: 20px;
 }
 
-/* .navThing:hover {
-    transform: translateY(10)
-} */
 
-.a {
-    color: #1DC642;
-}
+
 
 .login-button {
-    border: solid 2px #1DC642;
+    border: solid 1px #1DC642;
+
     text-align: center;
-    border-radius: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
- /* a.login-button {
-    color: white !important;
-} */
 
 
 .logo {
-    width:200px;
+    width:400px;
    text-align: center;  
 }
