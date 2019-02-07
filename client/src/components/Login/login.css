@@ -6,7 +6,10 @@
     /* IMPORT FONT!!! same as logo font.
     the rest use europa. */
     font-family: europa, sans-serif;
-    font-weight: 600;
+    font-weight: bold;
+    letter-spacing: 5px;
+
+
 }
 
 .card {
@@ -15,7 +18,18 @@
     font-family: europa, sans-serif;
     color: white;
     border-radius: 30px;
+    width: 500px;
+    margin: 150px auto;
+    text-align: center;
+    font-family: europa, sans-serif;
+    border-radius: 20px;
+    
+    box-shadow: 10px 10px rgb(0, 0, 0);
 
+}
+
+.boom {
+    text-align: left;
 }
 
 input {
@@ -32,13 +46,17 @@ input {
     padding-right: 15px;
     border-radius: 20px;
     text-transform: uppercase;
-    /* padding-top: px; */
-    /* padding-bottom: 8px; */
+    transform: translateX(1);
+    transition: transform 0.5s ease;
 }
 
 .sub-btn:hover {
+    transform: translateX(10px);
+
     background-color: rgba(255, 255, 255, 0.342);
 }
+
+
 
 
 
@@ -46,17 +64,19 @@ a {
     color: #1DC642 !important;
 }
 
-.card {
-    width: 500px;
-    margin: 150px auto;
-    text-align: center;
-    /* font-family: europa, sans-serif; */
-}
+
 
 .button-green {
     background: #1DC642;
 }
 
 .new-user {
-    color: white;
+    color: black;
+    margin-bottom: -13px;
+    /* background-color: white; */
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
 }
+

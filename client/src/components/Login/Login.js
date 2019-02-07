@@ -55,7 +55,7 @@ class Login extends React.Component {
       <div className="col-sm">
         <div className="card">
           <div className="card-body">
-            <h3 className="sign-in">SIGN IN</h3>
+            <h1 className="sign-in">SIGN IN</h1>
             <br />
             <form>
               <label className="col-sm-3" htmlFor="inputUsername">
@@ -66,7 +66,7 @@ class Login extends React.Component {
                 className="col-sm-4"
                 name="email"
                 type="text"
-                placeholder="Enter Username"
+                placeholder="oscar@egg.com"
                 onChange={this.typing}
               />
               <br />
@@ -79,14 +79,14 @@ class Login extends React.Component {
                 className="col-sm-4"
                 name="password"
                 type="password"
-                placeholder="Enter Password"
+                placeholder="¯\_(ツ)_/¯"
                 onChange={this.typing}
               />
             </form>
             <br />
             <Link to="/register">
               {' '}
-              <p className="new-user">Not a user? Create new account.</p>
+           <p className="new-user">Not a user? Create new account.</p>
             </Link>
             <br />
             <br />

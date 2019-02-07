@@ -116,10 +116,10 @@ class Register extends Component {
               />
             </form>
             <br />
-            <Link to="/login">Already a user?</Link>
+            <Link to="/login"><p className="new-user">Already a user?</p></Link>
             <br />
             <br />
-            <button className="btn btn-info button-green" onClick={this.submit}>
+            <button className="sub-btn" onClick={this.submit}>
               Submit
             </button>
           </div>
