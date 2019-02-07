@@ -1,6 +1,7 @@
 
 
 .whole-form {
+    position: fixed;
 
     font-family: europa, sans-serif;
     color: white;

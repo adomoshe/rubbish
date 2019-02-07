@@ -24,12 +24,14 @@
 
 
 .post-box {
+    margin-left: 20px;
     border: 1px solid black;
     padding: 10px;
     border-radius: 20px;
     width: 300px;
 
     box-shadow: 10px 10px black;
+    margin-bottom: 30px;
 }
 
 .post-pic {
