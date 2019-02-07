@@ -1,16 +1,28 @@
+
+
+
 .wrap-div {
- background-color: #1DC642;
- padding: 40px;
-border-radius: 30px;
+    font-family: europa, sans-serif;
+     background-color: #1DC642;
+     padding: 40px;
+    border-radius: 20px;
+    box-shadow: 10px 10px rgb(0, 0, 0);
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
 }
 
 
 .head {
     color: white;
     text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
 }
 
 .send-btn {
+    margin-top: 15px;
     border: 2px solid white;
     background-color: #1DC642;
     color: white;
@@ -18,13 +30,175 @@ border-radius: 30px;
     padding-right: 15px;
     border-radius: 20px;
     text-transform: uppercase;
+    transform: translateX(1);
+    transition: transform 0.5s ease;
+}
+
+.send-btn:hover {
+    transform: translateX(10px);
+
 }
 
 .big-text {
     border-radius: 20px;
-    
+
 }
 
 .send-btn:hover {
     background-color: rgba(255, 255, 255, 0.342);
 }
+
+
+.fake-convo {
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 10px 10px rgb(0, 0, 0);
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.speech-bub {
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    /* border: 1px solid black; */
+    width: 350px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.oscar-talk {
+    background-color: #1DC642;
+    color: white;
+    margin-left: 120px;
+}
+
+.gerald-talk {
+    border: #1DC642 2px solid ;
+    margin-right: 120px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                /* .talk-bubble {
+                    margin: 40px;
+                  display: inline-block;
+                  position: relative;
+                    width: 200px;
+                    height: auto;
+                    /* background-color: black; */
+                    /* border: 1px solid black;
+                } */
+                
+                
+                /* .round{
+                    border-radius: 30px;
+                      -webkit-border-radius: 30px;
+                      -moz-border-radius: 30px;
+                  
+                  } */ 
+                
+                  /* .tri-right.border.btm-left:before {
+                    content: ' ';
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    left: -8px;
+                    right: auto;
+                    top: auto;
+                    bottom: -40px;
+                    border: 32px solid;
+                    border-color: transparent transparent transparent #666;
+                }
+                
+                .tri-right.btm-left:after{
+                    content: ' ';
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    left: 38px;
+                    right: auto;
+                    top: auto;
+                    bottom: -20px;
+                    border: 12px solid;
+                    border-color: lightyellow transparent transparent lightyellow;
+                } */
+                
+                
+                /* .speech-bubble {
+                    position: relative;
+                    background: #000000;
+                    border-radius: .4em;
+                }
+                
+                .speech-bubble:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    width: 0;
+                    height: 0;
+                    border: 52px solid transparent;
+                    border-right-color: #000000;
+                    border-left: 0;
+                    border-top: 0;
+                    margin-top: -26px;
+                    margin-left: -52px;
+                } */

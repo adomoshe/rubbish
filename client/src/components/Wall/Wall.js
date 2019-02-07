@@ -13,18 +13,19 @@ class Wall extends React.Component {
   render() {
     var newPost = (
       <form className="whole-form">
-        <input
+            <br />
+      <h1 className="sign-in">POST</h1>
+        <textarea
           // className="input-box"
           className="wall-input-smol"
-          type="text"
-          placeholder="What do you need help with?"
+          placeholder="Need help? Write your headline here..."
         />
         <br />
         <textarea
         className="wall-input"
           // className="input-box"
           // type="textarea"
-          placeholder="       Write dates and details of job here!"
+          placeholder="Write your description here! (dates, details, etc)..."
         />
         <br />
 
@@ -40,10 +41,12 @@ class Wall extends React.Component {
 
     return (
       <div className="container">
-        <div ><Post /></div>
+                <div className="row">
+                <div className="col-md-6" ><Post /></div>
         <br />
         <br />
-        <div>{newPost}</div>
+        <div className="col-md-6" >{newPost}</div>
+                  </div>
       </div>
     );
   }
