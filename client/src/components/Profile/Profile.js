@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "../Profile/profile.css"
 import { Link } from 'react-router-dom';
+import oscar from "../Profile/oscar-prof_1.png"
 
 import API from '../../utils/API';
 
@@ -11,31 +12,31 @@ class Profile extends Component {
       .catch(err => console.log(err));
   }
 
-  cardStyle = {
-    width: '18rem'
-  };
+
 
   render() {
     return (
       <div>
-        <div className="card" style={this.cardStyle}>
-          <img
-            className="card-img-top"
-            src="https://photos.gograph.com/thumbs/CSP/CSP657/cartoon-garbage-can-vector-stock_k22277118.jpg"
-            alt="Trash"
-          />
+          <div className="prof-card">
+        <div className="card " >
           <div className="card-body">
-            <ul className="list-group list-group-flush">
-              <li className="list-group-item">Name: Oscar</li>
-              <li className="list-group-item">Date of Birth: 1/1/2010</li>
-              <li className="list-group-item">Address: 123 Dumpster Blvd.</li>
+          <img width="170px;"
+            className="oscar-again"
+            src={oscar}
+            alt="its oscar again"
+          />
+            <ul className="oscar">
+              <li className="osc-stuff">Name: Oscar</li>
+              <li className="osc-stuff">Date of Birth: 1/1/2010</li>
+              <li className="osc-stuff">Address: 123 Dumpster Blvd.</li>
             </ul>
           </div>
           <Link to="/">
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="sub-btn prof-btn">
               Logout
             </button>
           </Link>
+        </div>
         </div>
       </div>
     );
