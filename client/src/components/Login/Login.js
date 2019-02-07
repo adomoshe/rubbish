@@ -91,7 +91,7 @@ class Login extends React.Component {
             <br />
             <br />
             <button type="submit" className="sub-btn" onClick={this.submit}>
-              Submit
+              Enter
             </button>
           </div>
         </div>

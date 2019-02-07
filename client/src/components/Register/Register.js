@@ -64,7 +64,7 @@ class Register extends Component {
       <div className="col-sm">
         <div className="card">
           <div className="card-body">
-            <h3>Please Register</h3>
+            <h1 className="sign-in">CREATE NEW ACCOUNT</h1>
             <br />
             <form>
               <label className="col-sm-3" htmlFor="inputUsername">
@@ -75,7 +75,7 @@ class Register extends Component {
                 className="col-sm-4"
                 name="firstname"
                 type="text"
-                placeholder="Enter First Name"
+                placeholder=""
                 onChange={this.typing}
               />
               <br />
@@ -87,7 +87,7 @@ class Register extends Component {
                 className="col-sm-4"
                 name="lastname"
                 type="text"
-                placeholder="Enter Last Name"
+                placeholder=""
                 onChange={this.typing}
               />
               <br />
@@ -99,7 +99,7 @@ class Register extends Component {
                 className="col-sm-4"
                 name="email"
                 type="text"
-                placeholder="Enter Email"
+                placeholder=""
                 onChange={this.typing}
               />
               <br />
@@ -111,7 +111,7 @@ class Register extends Component {
                 className="col-sm-4"
                 name="password"
                 type="password"
-                placeholder="Enter Password"
+                placeholder=""
                 onChange={this.typing}
               />
             </form>
