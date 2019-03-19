@@ -1,42 +1,39 @@
 .whole-form {
-    background-color: rgba(29, 198, 66, 0.267);
+  background-color: rgba(29, 198, 66, 0.267);
 }
 
-
-
-
 .input-box {
-    width: 200px;
-    height: 200px;
+  width: 200px;
+  height: 200px;
 }
 
 .wall-input-smol {
-    margin-top: 20px;
-    width: 200px;
-    height: 60px;
-    border-radius: 20px;
+  margin-top: 20px;
+  width: 200px;
+  height: 60px;
+  border-radius: 20px;
 }
 
 .wall-input {
-    margin-top: 20px;
-    width: 200px;
-    height: 200px;
-    border: none;
-    border-radius: 20px;
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  border: none;
+  border-radius: 20px;
 }
 
 .sub-btn-two {
-    margin-top: 15px;
-    margin-bottom: 25px;
-    border: 2px solid white;
-    background-color: #1DC642;
-    color: white;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 20px;
-    text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  border: 2px solid white;
+  background-color: #1dc642;
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 20px;
+  text-transform: uppercase;
 }
 
-.sub-btn-two:hover { 
-    transform: translateY(-10px)
+.sub-btn-two:hover {
+  transform: translateY(-10px);
 }

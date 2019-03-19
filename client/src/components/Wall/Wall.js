@@ -10,6 +10,7 @@ class Wall extends React.Component {
       .then(res => console.log(res))
       .catch(err => console.log(err));
   }
+  
   render() {
     var newPost = (
       <form className="whole-form">
@@ -34,7 +35,7 @@ class Wall extends React.Component {
     )
 
     // pushPost() {
-      
+
     // }
 
 
