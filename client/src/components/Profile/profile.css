@@ -1,6 +1,37 @@
-.btn-primary {
-    background: #1DC642 !important;
-    border: black;
-    margin-bottom: 35px;
-    width: 100px;
+
+
+.oscar {
+    color: black;
+}
+
+.prof-card {
+    background-color: white;
+    text-align: center;
+    margin-top: -80px;
+}
+
+.oscar-again {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.oscar {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    font-size: 20px;
+    text-align: left;
+    width: 400px;
+}
+
+.osc-stuff {
+    list-style-type: none;
+    
+}
+
+
+.prof-btn {
+    margin-bottom: 20px;
 }

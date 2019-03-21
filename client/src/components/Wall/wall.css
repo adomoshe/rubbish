@@ -1,3 +1,5 @@
+
+
 .whole-form {
   background-color: rgba(29, 198, 66, 0.267);
 }
@@ -36,4 +38,68 @@
 
 .sub-btn-two:hover {
   transform: translateY(-10px);
+    position: fixed;
+
+    font-family: europa, sans-serif;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    background-color: #1DC642;
+    /* margin-bottom: 50px; */
+    border-radius: 20px;
+    box-shadow: 10px 10px black;
+
+}
+
+
+
+
+/* .input-box {
+    width: 200px;
+    height: 200px;
+
+} */
+
+.wall-input-smol {
+    margin-top: 20px;
+    width: 300px;
+    height: 60px;
+    border-radius: 20px;
+    padding: 10px;
+    border: white solid 2px;
+    background-color: rgba(255, 255, 255, 0.65);
+}
+
+.wall-input {
+    padding: 10px;
+    margin-top: 20px;
+    width: 300px;
+    height: 200px;
+    border: none;
+    border-radius: 20px;
+    border: white solid 2px;
+    background-color: rgba(255, 255, 255, 0.65);
+}
+
+.sub-btn-two {
+    border: 2px solid white;
+    background-color: #1DC642;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    transform: translateX(1);
+    transition: transform 0.5s ease;
+    margin-top: 25px;
+    margin-bottom: 30px;
+
+}
+
+
+.sub-btn-two:hover {
+    transform: translateX(10px);
+
+    background-color: rgba(255, 255, 255, 0.342);
 }

@@ -1,10 +1,10 @@
 .container {
     text-align: center;
+    font-family: europa, sans-serif;
 }
 
 .contact-btn {
-    margin-top: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     border: 2px solid white;
     background-color: #1DC642;
     color: white;
@@ -12,16 +12,29 @@
     padding-right: 15px;
     border-radius: 20px;
     text-transform: uppercase;
+    transform: translateX(1);
+    transition: transform 0.5s ease;
 }
 
 .contact-btn:hover {
-    transform: translateY(-10px)
+    transform: translateX(10px);
+
+    background-color: rgba(29, 198, 66, 0.753);
 }
 
 
 .post-box {
+    margin-left: 20px;
     border: 1px solid black;
     padding: 10px;
     border-radius: 20px;
     width: 300px;
+
+    box-shadow: 10px 10px black;
+    margin-bottom: 30px;
+}
+
+.post-pic {
+    padding-top: 5px;
+    padding-bottom: 10px;
 }

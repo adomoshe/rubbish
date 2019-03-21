@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt-nodejs');
 const Schema = mongoose.Schema;
 
 const OwnerSchema = new Schema({
@@ -27,7 +28,10 @@ const OwnerSchema = new Schema({
     type: String,
     unique: true,
     required: 'E-Mail is required',
-    match: [/.+@.+\..+/, 'Please enter a valid e-mail address']
+    match: [/.+@.+\..+/, 'Please enter a valid e-mail address'],
+    validate: {
+      isEmail: true
+    }
   },
   userCreated: {
     type: Date,
@@ -39,6 +43,14 @@ OwnerSchema.methods.setFullName = function() {
   this.fullName = this.firstName + ' ' + this.lastName;
   return this.fullName;
 };
+
+OwnerSchema.prototype.validPassword = function(password) {
+  return bcrypt.compareSync(password, this.password);
+};
+
+OwnerSchema.hook("beforeCreate", function(owner) {
+  owner.password = bcrypt.hashSync(owner.password, bcrypt.genSaltSync(10), null);
+});
 
 const Owner = mongoose.model('Owner', OwnerSchema);
 
